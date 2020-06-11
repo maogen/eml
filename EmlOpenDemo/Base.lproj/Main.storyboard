@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEm-Yu-aew">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oM-eW-I1b">
+                                <rect key="frame" x="0.0" y="84" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rMo-hP-qPG"/>
+                                </constraints>
+                                <state key="normal" title="打开文件"/>
+                                <connections>
+                                    <action selector="btnOpenFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3re-ZF-G3k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6oM-eW-I1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="77L-Fo-qnW"/>
+                            <constraint firstItem="fEm-Yu-aew" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="O14-ce-LDp"/>
+                            <constraint firstItem="fEm-Yu-aew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TEc-4W-QKP"/>
+                            <constraint firstItem="6oM-eW-I1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="W7W-EE-mqC"/>
+                            <constraint firstItem="fEm-Yu-aew" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XnK-3e-ysF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6oM-eW-I1b" secondAttribute="trailing" id="jJh-Sl-3vM"/>
+                            <constraint firstItem="fEm-Yu-aew" firstAttribute="top" secondItem="6oM-eW-I1b" secondAttribute="bottom" constant="30" id="mS1-oC-eYS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="fEm-Yu-aew" id="3Qs-gX-60l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
